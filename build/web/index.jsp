@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>Formulario Prueba de JSP</h1>
-        <form action=" " method=" ">
+        <form action="SrPersona" method="POST">
             <p><label>Dni:</label><input type="text" name="dni"></input></p>
             <p><label>Nombre:</label><input type="text" name="nombre"></input></p>
             <p><label>Apellido:</label><input type="text" name="apellido"></input></p>

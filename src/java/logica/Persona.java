@@ -4,18 +4,29 @@
  */
 package logica;
 
+import javax.persistence.Basic;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
 /**
  *
  * @author alumno
  */
-public class Persona {
-    Integer id;
-    String dni;
-    String nombre;
-    String apellido;
-    String telefono;
 
-    public Persona(Integer id, String dni, String nombre, String apellido, String telefono) {
+@Entity
+public class Persona {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private int id;
+    @Basic
+    private String dni;
+    private String nombre;
+    private String apellido;
+    private String telefono;
+
+    public Persona(int id, String dni, String nombre, String apellido, String telefono) {
         this.id = id;
         this.dni = dni;
         this.nombre = nombre;
@@ -28,7 +39,7 @@ public class Persona {
     }
 
     public void setDni(String dni) {
-        this.dni = dni;
+            this.dni = dni;
     }
 
     public String getNombre() {
@@ -39,7 +50,7 @@ public class Persona {
         this.nombre = nombre;
     }
 
-    public Integer getId() {
+    public int getId() {
         return id;
     }
 
